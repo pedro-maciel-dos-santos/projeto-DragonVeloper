@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DragonVeloper</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- Fonte -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header id="home-area">
+        <div class="container" id="nav-container">
+            <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbar-custom">
+                <div class="container-fluid d-flex justify-content-between align-items-center">
+
+                    <!-- LOGO: sempre à esquerda -->
+                    <a class="navbar-brand order-1 order-lg-1" href="#">
+                        <img src="img/DragonVeloper.png" alt="Logo da DragonVeloper" id="logo">
+                    </a>
+
+                    <!-- BOTÃO HAMBURGUER: vai pra direita em telas pequenas -->
+                    <button class="navbar-toggler order-2 order-lg-3 ms-auto" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- LINKS DO MENU -->
+                    <div class="collapse navbar-collapse order-3 order-lg-2" id="navbar-links">
+                        <div class="navbar-nav me-auto">
+                            <a href="#home-area" class="nav-item nav-link" id="home-menu">Home</a>
+                            <a href="#about-area" class="nav-item nav-link" id="about-menu">DragonVeloper</a>
+                            <a href="#services-area" class="nav-item nav-link" id="services-menu">Serviços</a>
+                            <a href="#contact-area" class="nav-item nav-link" id="contact-menu">Contato</a>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+
+        </div>
+    </header>
+    <main>
+        <div class="container-fluid">
+            <div class="carousel slide" id="mainSlider" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="0" class="active">
+                    </button>
+                    <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="1">
+                    </button>
+                    <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="2">
+                    </button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/evento.png" alt="Evento de desenvolvimento web" class="d-block w-100">
+                        <div class="carousel-caption d-md-block">
+                            <h2>Participe de nossos eventos!</h2>
+                            <p>Veja as datas de nosso eventos e clique para participar!</p>
+                            <a href="#" class="main-btn">Participar</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/servico.png" alt="Desenvolva seu site" class="d-block w-100">
+                        <div class="carousel-caption d-md-block">
+                            <h2>Está querendo tirar o projeto do papel?</h2>
+                            <p>Nossa equipe de desenvolvedores web está pronta para lhe atender.</p>
+                            <a href="#" class="main-btn">Iniciar projeto</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/manutencao.png" alt="Manutenção de sites" class="d-block w-100">
+                        <div class="carousel-caption d-md-block">
+                            <h2>Está buscando manutenção no seu site?</h2>
+                            <p>Contamos com profissionais qualificados para resolver seu problema.</p>
+                            <a href="#" class="main-btn">Agendar Manutenção</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#mainSlider" class="carousel-control-prev" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a href="#mainSlider" class="carousel-control-next" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <div id="about-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="main-title">Sobre a DragonVeloper</h3>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="img/agencia.jpg" alt="Agência DragonVeloper" class="img-fluid">
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="about-title">Uma agência que pensa no futuro</h3>
+                            <p>Nossos projetos são adaptados ao cliente e seu propósito.</p>
+                            <p>Após a especificação do projetos os arquitetos de software definirão as melhores
+                                tecnologias para seu projeto.</p>
+                            <p>E nossos designers trabalharão na sua interface/layout para impulsionar o negócio.</p>
+                            <p>Veja outros diferenciais:</p>
+                            <ul id="about-list">
+                                <li><i class="bi bi-check-lg"></i>Utilização de IAs</li>
+                                <li><i class="bi bi-check-lg"></i>Layout responsivo para todos os dispositivos</li>
+                                <li><i class="bi bi-check-lg"></i>otimização para mecanismos de busca</li>
+                                <li><i class="bi bi-check-lg"></i>Desenvolvimento com metodologia ágil</li>
+                                <li><i class="bi bi-check-lg"></i>E-commerce</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="services-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="main-title">Nossas especialidades</h3>
+                        </div>
+                        <div class="col-md-4 service-box">
+                            <i class="bi bi-phone-fill"></i>
+                            <h4>Aplicativos Nativos</h4>
+                            <p>Utilizamos o real poder dos dispositivos móveis construindo aplicativos nativos.</p>
+                        </div>
+                        <div class="col-md-4 service-box">
+                            <i class="bi bi-cart3"></i>
+                            <h4>E-commerce</h4>
+                            <p>Temos uma plataforma própria de e-commerce que se adapta a qualquer regra de negócio (B2C
+                                e B2B).</p>
+                        </div>
+                        <div class="col-md-4 service-box">
+                            <i class="bi bi-brush-fill"></i>
+                            <h4>Design Criativo</h4>
+                            <p>Nossos designers são especializados em UI/UX e possuem vasta experiência no mercado de
+                                software.</p>
+                        </div>
+                        <div class="col-md-4 service-box">
+                            <i class="bi bi-google"></i>
+                            <h4>Experts em SEO</h4>
+                            <p>Com Nossos serviços de marketing seu site será melhor posicionado no Google e venderá
+                                mais.</p>
+                        </div>
+                        <div class="col-md-4 service-box">
+                            <i class="bi bi-headset"></i>
+                            <h4>Suporte 24/7</h4>
+                            <p>Suporte técnico especializado em sites: manutenção, segurança, otimização e resolução de
+                                problemas para a sua presença online.</p>
+                        </div>
+                        <div class="col-md-4 service-box">
+                            <i class="bi bi-hdd-rack-fill"></i>
+                            <h4>Experiência em servidores</h4>
+                            <p>Garantimos uptime e também rápido tempo de resposta do seu site para o seu cliente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="apply-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 apply-box" id="company-img">
+                        </div>
+                        <div class="col-md-6 apply-box" id="pattern-img">
+                            <h4>Gosta de desafios?</h4>
+                            <p>Temos várias posições abertas, entre elas: Software Engineer, UI/UX Designer, Project
+                                Manager e mais.</p>
+                            <p>Clique no botão abaixo e confira os benefícios e as posições em aberto.</p>
+                            <p>Aqui você terá a chance de trabalhar com as melhores tecnologias e os profissionais mais
+                                capacitados.</p>
+                            <a href="#" class="main-btn" id="apply-btn">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="news-area">
+                <div class="container">
+                    <div class="col-md-12">
+                        <h3 class="main-title">Converse com nossa IA assistente</h3>
+                    </div>
+                    <p>Aponte para o QRCode abaixo ou acesse o link.</p>
+                    <picture>
+                        <source media="(max-width: 425px)" srcset="img/qr-codeCELULAR.png">
+                        <source media="(max-width: 768px)" srcset="img/qr-codeTABLET.png">
+                        <img src="img/qr-codePC.png" alt="QR-Code para ter acesso ao nosso Assistente IA">
+                    </picture>
+                </div>
+            </div>
+            <div id="call-area">
+                <div class="container">
+                    <div class="row">
+                        <p>Deseja fazer um orçamento sem compromisso</p>
+                        <button class="main-btn" id="call-btn">Orçar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div>
+        <div id="contact-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="main-title">
+                            Entre em contato conosco
+                        </h3>
+                    </div>
+                    <div class="col-md-4 contact-box">
+                        <i class="bi bi-telephone-fill"></i>
+                        <p>
+                            <span class="contact-title">
+                                Ligue para:
+                            </span>
+                            (12)99626-8941
+                        </p>
+                        <p>
+                            <span class="contact-title">
+                                Horário:
+                            </span>
+                            8:00 - 19:00
+                        </p>
+                    </div>
+                    <div class="col-md-4 contact-box">
+                        <i class="bi bi-envelope"></i>
+                        <p>
+                            <span class="contact-title">
+                                Envie seu e-mail:
+                            </span>
+                            pe.maciel.santos@gmail.com
+                        </p>
+                    </div>
+                    <div class="col-md-4 contact-box">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <p>
+                            <span class="contact-title">
+                                Venha tomar um café:
+                            </span>
+                            Av. São Jorge 1953
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container-fluid" id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12" id="footer-top">
+                            <div class="row justify-content-between">
+                                <div class="col-4">
+                                    <h2>DragonVeloper</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12" id="footer-details">
+                            <div class="row">
+                                <div class="col-12 col-md-4" id="news-container">
+                                    <h4>Fique por dentro das novidades:</h4>
+                                    <p class="footer-p">Inscreva-se para saber em primeira mão</p>
+                                    <form action="">
+                                        <div class="mb-3">
+                                            <input type="email" name="email" class="form-control"
+                                                placeholder="Digite seu e-mail" id="email-id">
+                                        </div>
+                                        <button id="form-btn" type="submit">Inscrever</button>
+                                    </form>
+                                </div>
+                                <div class="col-12 col-md-4" id="links-container">
+                                    <div class="row">
+                                        <h4>Você pode estar procurando por:</h4>
+                                        <div class="col-6">
+                                            <ul class="list-unstyled">
+                                                <li><a href="#" class="link-footer">Contratar</a></li>
+                                                <li><a href="#" class="link-footer">Manutenção</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-6">
+                                            <ul class="list-unstyled">
+                                                <li><a href="#" class="link-footer">Eventos</a></li>
+                                                <li><a href="#" class="link-footer">Suporte</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4" id="social-container">
+                                    <h4>Nossas redes sociais:</h4>
+                                    <div id="social-icons">
+                                        <i class="bi bi-facebook"></i>
+                                        <i class="bi bi-instagram"></i>
+                                        <i class="bi bi-youtube"></i>
+                                        <i class="bi bi-whatsapp"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12" id="footer-bottom">
+                            <div class="row justify-content-between">
+                                <div class="col-12 col-md-3">
+                                    <p><a href="https://github.com/pedro-maciel-dos-santos"
+                                            class="link-footer">DragonVeloper</a>
+                                        &copy; 2025</p>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <p>Realizamos o seu projeto!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
