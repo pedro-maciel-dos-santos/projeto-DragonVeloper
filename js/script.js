@@ -19,11 +19,25 @@ document.querySelectorAll('div a.nav-item').forEach(link => {
   });
 });
 
-window.addEventListener('scroll', function () {
+function handleNavbarBackground() {
   const navbar = document.querySelector('.navbar');
-  if (window.scrollY > 10) {
+  const isDesktop = window.innerWidth > 768;
+
+  if (isDesktop && window.scrollY > 10) {
     navbar.classList.add('navbar-scrolled');
-  } else {
+  } else if (isDesktop && window.scrollY <= 10) {
     navbar.classList.remove('navbar-scrolled');
+  } else {
+    // Em telas pequenas, sempre usa a navbar com fundo
+    navbar.classList.add('navbar-scrolled');
   }
-});
+}
+
+// Verifica quando rola a página
+window.addEventListener('scroll', handleNavbarBackground);
+
+// Verifica quando a janela é redimensionada (por exemplo, virar o celular ou redimensionar o navegador)
+window.addEventListener('resize', handleNavbarBackground);
+
+// Verifica logo ao carregar a página
+window.addEventListener('load', handleNavbarBackground);

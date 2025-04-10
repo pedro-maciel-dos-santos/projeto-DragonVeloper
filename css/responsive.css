@@ -101,6 +101,7 @@
 
     #call-area p, #call-area #call-btn {
         font-size: 16px;
+        margin: 0;
     }
 
     /* Footer */
