@@ -204,3 +204,107 @@
         width: 40%;
     }
 }
+
+@media (max-width: 350px) {
+    /* Slider */
+
+    #mainSlider {
+        margin-top: 90px;
+    }
+        
+    #mainSlider .carousel-caption {
+        top: 5%;
+    }
+        
+    #mainSlider .carousel-caption h2 {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    #mainSlider .carousel-caption p {
+        display: none;
+    }
+
+    #carousel-caption .main-btn {
+        font-size: 5px;
+    }
+
+    /* About */
+
+    .main-title {
+        font-size: 25px;
+    }
+
+    #about-list li {
+        font-size: 13px;
+    }
+
+    #about-area img {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+    /* Apply */
+
+    #apply-area {
+        height: auto;
+    }
+
+    #company-img {
+        display: none;
+    }
+
+    /* News */
+
+    #news-area .main-title {
+        font-size: 24px;
+    }
+
+    #news-area p {
+        font-size: 16px;
+    }
+
+    #id-email {
+        width: 80%;
+    }
+
+    /* Call */
+
+    #call-area p {
+        font-size: 14px;
+        letter-spacing: 0;
+        margin: 0;
+        width: 50%;
+    }
+
+    #call-area #call-btn {
+        height: 10%;
+    }
+
+    /* Contact */
+
+    .contact-box {
+        border: none;
+        margin-bottom: 0;
+    }
+
+    /* Footer */
+
+    #news-container,
+    #contact-container,
+    #links-container {
+        padding: 0;
+        border: 0;
+        margin-bottom: 2em;
+    }
+
+    #form-btn {
+        width: 50%;
+    }
+
+    #social-icons i {
+        font-size: 20px;
+    }
+
+
+}
