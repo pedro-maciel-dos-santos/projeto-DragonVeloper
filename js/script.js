@@ -1,3 +1,10 @@
+document.addEventListener("DOMContentLoaded", function() {
+    AOS.init({
+        duration: 1000, // duração da animação em ms
+        once: false      // anima apenas uma vez ao rolar
+    });
+});
+
 document.querySelectorAll('div a.nav-item').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault(); // Impede o comportamento padrão do link

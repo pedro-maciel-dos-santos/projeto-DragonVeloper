@@ -3,9 +3,13 @@
 :root {
     --primary-color-blue: #65daf9;
     --second-color-blue: #3ec1d5;
+    --third-color-blue: #4597d1;
+    --fourth-color-blue: #032d5f;
     --primary-color-gray: #353d41;
     --second-color-gray: #7a7a7a;
     --primary-color-dark: #050505;
+
+    --gradient-blue: linear-gradient(135deg, var(--third-color-blue) 0%, var(--fourth-color-blue) 100%);
     
 }
 
@@ -35,6 +39,12 @@ header, .navbar {
     background-image: linear-gradient(to top, #303030, #000);
 }
 
+.navbar {
+    height: 60px;            /* altura fixa da navbar */
+    display: flex;
+    align-items: center;     /* centraliza verticalmente */
+}
+
 .navbar-custom {
     background: transparent;
     transition: background-color 0.3s ease;
@@ -50,7 +60,9 @@ header, .navbar {
 }
 
 #logo {
-    width: 75px;
+    max-height: 120px;   /* controla a altura máxima */
+    width: auto;        /* mantém a proporção */
+    margin-left: 10px;  /* opcional, espaçamento da borda esquerda */
 }
 
 .navbar-brand {
@@ -63,13 +75,31 @@ header, .navbar {
     transition: .5s;
 }
 
-#navbar-links a {
-    color: #fff;
+.nav-link {
+    position: relative; /* cria referência para o ::after */
+    display: inline-block; /* garante que o ::after não "escape" */
+    padding-bottom: 5px; /* espaço pro underline não colar no texto */
 }
 
-#navbar-links a:hover {
+.nav-link:hover {
     color: var(--primary-color-blue);
     transition: .5s;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 50%;
+    bottom: 0;
+    background: var(--gradient-blue);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
 }
 
 .login {
@@ -122,8 +152,9 @@ header, .navbar {
 
 .main-btn {
     background-color: var(--primary-color-blue);
-    color: #fff;
+    color: var(--primary-color-dark);
     text-transform: uppercase;
+    text-decoration: none;
     width: 200px;
     height: 60px;
     padding: 10px 20px;
@@ -260,6 +291,7 @@ header, .navbar {
 }
 
 #apply-btn {
+    color: #fff;
     display: block;
     height: auto;
     width: 180px;
@@ -271,6 +303,7 @@ header, .navbar {
 }
 
 #apply-btn:hover {
+    color: var(--primary-color-dark);
     border-color: var(--primary-color-blue);
     background-color: var(--primary-color-blue);
 }
@@ -476,7 +509,8 @@ header, .navbar {
 
 #form-btn {
     background-color: var(--primary-color-blue);
-    color: #fff;
+    color: var(--primary-color-dark);
+    text-decoration: none;
     text-transform: uppercase;
     width: 30%;
     height: 50%;
@@ -494,7 +528,7 @@ header, .navbar {
 }
 
 .link-footer {
-    color: var(--second-color-gray);
+    color: var(--primary-color-gray);
     text-decoration: none;
     text-align: center;
 }
