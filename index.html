@@ -28,9 +28,8 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous">
-    </script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
 
 </head>
 
@@ -54,10 +53,11 @@
 
                     <!-- LINKS DO MENU -->
                     <div class="collapse navbar-collapse order-3 order-lg-2" id="navbar-links">
-                        <div class="navbar-nav mx-auto">
+                        <div class="navbar-nav ms-auto">
                             <a href="#home-area" class="nav-item nav-link" id="home-menu">Home</a>
                             <a href="#about-area" class="nav-item nav-link" id="about-menu">DragonVeloper</a>
                             <a href="#services-area" class="nav-item nav-link" id="services-menu">Serviços</a>
+                            <a href="#solutions-area" class="nav-item nav-link" id="solutions-menu">Soluções</a>
                             <a href="#contact-area" class="nav-item nav-link" id="contact-menu">Contato</a>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
     </header>
     <main>
         <div class="container-fluid">
-            <div class="carousel slide" id="mainSlider" data-bs-ride="carousel">
+            <section class="carousel slide" id="mainSlider" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="0" class="active">
                     </button>
@@ -112,8 +112,8 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
-            </div>
-            <div id="about-area">
+            </section>
+            <section id="about-area">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -139,8 +139,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="services-area">
+            </section>
+            <section id="services-area">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -182,8 +182,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="apply-area">
+            </section>
+            <section id="apply-area">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-6 apply-box" id="company-img">
@@ -199,40 +199,124 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="news-area">
+            </section>
+            <!-- Products Section -->
+            <section id="solutions-area" class="py-section">
                 <div class="container">
-                    <div class="col-md-12"  data-aos="fade-up">
-                        <h3 class="main-title">Converse com nossa IA assistente</h3>
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto text-center mb-5" data-aos="fade-up">
+                            <h2 class="display-4 fw-bold mb-4">Nossas Soluções</h2>
+                            <p class="lead">
+                                Conheça os sistemas que vão revolucionar a gestão da sua empresa
+                            </p>
+                        </div>
                     </div>
-                    <p>Aponte para o QRCode abaixo ou acesse o link.</p>
-                    <picture>
-                        <source media="(max-width: 425px)" srcset="img/qr-codeCELULAR.png">
-                        <source media="(max-width: 768px)" srcset="img/qr-codeTABLET.png">
-                        <img src="img/qr-codePC.png" alt="QR-Code para ter acesso ao nosso Assistente IA">
-                    </picture>
+
+                    <div class="row g-4">
+                        <!-- ERP Card -->
+                        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card h-100">
+                                <div class="card-body p-4">
+                                    <div class="mb-4">
+                                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300&q=80"
+                                            alt="ERP Sistema" class="img-fluid rounded-3">
+                                    </div>
+                                    <h3 class="h4 fw-bold mb-3">ERP Inteligente</h3>
+                                    <p class="text-muted mb-4">
+                                        Sistema completo de gestão empresarial com IA integrada para automatizar
+                                        processos
+                                        e otimizar a tomada de decisões.
+                                    </p>
+                                    <ul class="feature-list mb-4">
+                                        <li>Gestão financeira completa</li>
+                                        <li>Controle de estoque inteligente</li>
+                                        <li>Relatórios em tempo real</li>
+                                        <li>Integração com e-commerce</li>
+                                    </ul>
+                                    <a href="/produtos/erp" class="card-btn">
+                                        Saiba mais
+                                        <i class="fas fa-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CRM Card (Featured) -->
+                        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="card h-100 card-featured">
+                                <div class="card-body p-4">
+                                    <div class="mb-4">
+                                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300&q=80"
+                                            alt="CRM Sistema" class="img-fluid rounded-3">
+                                    </div>
+                                    <h3 class="h4 fw-bold mb-3">CRM Avançado</h3>
+                                    <p class="text-muted mb-4">
+                                        Gerencie relacionamentos com clientes de forma inteligente, aumentando vendas
+                                        e melhorando a experiência do cliente.
+                                    </p>
+                                    <ul class="feature-list mb-4">
+                                        <li>Automação de vendas</li>
+                                        <li>Analytics preditivo</li>
+                                        <li>Gestão de pipeline</li>
+                                        <li>Integração omnichannel</li>
+                                    </ul>
+                                    <a href="/produtos/crm" class="card-btn">
+                                        Começar agora
+                                        <i class="fas fa-rocket ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BI Card -->
+                        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="card h-100">
+                                <div class="card-body p-4">
+                                    <div class="mb-4">
+                                        <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300&q=80"
+                                            alt="BI Sistema" class="img-fluid rounded-3">
+                                    </div>
+                                    <h3 class="h4 fw-bold mb-3">Business Intelligence</h3>
+                                    <p class="text-muted mb-4">
+                                        Transforme dados em insights acionáveis com nossa plataforma de análise
+                                        e visualização de dados.
+                                    </p>
+                                    <ul class="feature-list mb-4">
+                                        <li>Dashboards interativos</li>
+                                        <li>Machine Learning integrado</li>
+                                        <li>Alertas automáticos</li>
+                                        <li>Previsões inteligentes</li>
+                                    </ul>
+                                    <a href="/produtos/bi" class="card-btn">
+                                        Saiba mais
+                                        <i class="fas fa-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div id="call-area">
+            </section>
+            <section id="call-area">
                 <div class="container">
                     <div class="row">
                         <p>Deseja fazer um orçamento sem compromisso</p>
                         <button class="main-btn" id="call-btn">Orçar</button>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     </main>
     <div>
-        <div id="contact-area">
+        <section id="contact-area">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12"  data-aos="fade-up">
+                    <div class="col-md-12" data-aos="fade-up">
                         <h3 class="main-title">
                             Entre em contato conosco
                         </h3>
                     </div>
-                    <div class="col-md-4 contact-box"  data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-4 contact-box" data-aos="fade-up" data-aos-delay="100">
                         <i class="bi bi-telephone-fill"></i>
                         <p>
                             <span class="contact-title">
@@ -247,7 +331,7 @@
                             8:00 - 19:00
                         </p>
                     </div>
-                    <div class="col-md-4 contact-box"  data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-md-4 contact-box" data-aos="fade-up" data-aos-delay="200">
                         <i class="bi bi-envelope"></i>
                         <p>
                             <span class="contact-title">
@@ -256,7 +340,7 @@
                             dragonveloper@gmail.com
                         </p>
                     </div>
-                    <div class="col-md-4 contact-box"  data-aos="fade-up" data-aos-delay="300">
+                    <div class="col-md-4 contact-box" data-aos="fade-up" data-aos-delay="300">
                         <i class="bi bi-geo-alt-fill"></i>
                         <p>
                             <span class="contact-title">
@@ -267,7 +351,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <footer>
             <div class="container-fluid" id="footer">
                 <div class="container">
@@ -324,7 +408,7 @@
                             <div class="row justify-content-between">
                                 <div class="col-12 col-md-4">
                                     <p>
-                                        &copy; 2025 
+                                        &copy; 2025
                                         <a href="https://github.com/pedro-maciel-dos-santos"
                                             class="link-footer">DragonVeloper
                                         </a>
@@ -339,8 +423,6 @@
                     </div>
                 </div>
             </div>
-
-
     </div>
     </footer>
     <script src="js/script.js"></script>

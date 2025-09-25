@@ -4,12 +4,14 @@
     --primary-color-blue: #65daf9;
     --second-color-blue: #3ec1d5;
     --third-color-blue: #4597d1;
-    --fourth-color-blue: #032d5f;
+    --fourth-color-blue: #0559bf;
+    --fifth-color-blue: #032d5f;
     --primary-color-gray: #353d41;
     --second-color-gray: #7a7a7a;
     --primary-color-dark: #050505;
 
-    --gradient-blue: linear-gradient(135deg, var(--third-color-blue) 0%, var(--fourth-color-blue) 100%);
+    --gradient-blue-f: linear-gradient(135deg, var(--third-color-blue) 0%, var(--fourth-color-blue) 100%);
+    --gradient-blue-s: linear-gradient(135deg, var(--fifth-color-blue) 0%, var(--third-color-blue) 100%);
     
 }
 
@@ -63,6 +65,11 @@ header, .navbar {
     max-height: 120px;   /* controla a altura máxima */
     width: auto;        /* mantém a proporção */
     margin-left: 10px;  /* opcional, espaçamento da borda esquerda */
+    transition: all .3s ease;
+}
+
+#logo:hover {
+    transform: scale(1.2);
 }
 
 .navbar-brand {
@@ -75,10 +82,14 @@ header, .navbar {
     transition: .5s;
 }
 
+.navbar-nav {
+    margin-right: 30px;
+}
+
 .nav-link {
-    position: relative; /* cria referência para o ::after */
-    display: inline-block; /* garante que o ::after não "escape" */
-    padding-bottom: 5px; /* espaço pro underline não colar no texto */
+    position: relative; 
+    display: inline-block; 
+    padding-bottom: 5px;
 }
 
 .nav-link:hover {
@@ -348,6 +359,45 @@ header, .navbar {
 #news-btn:hover {
     background-color: #fff;
     color: var(--primary-color-blue);
+}
+
+/* Soluções */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* garante espaçamento entre conteúdo e botão */
+  height: 100%; /* todos os cards terão a mesma altura */
+}
+
+.card .card-btn {
+  margin-top: auto;      /* empurra o botão pro fim */
+  align-self: center;    /* centraliza o botão */
+  text-align: center;    /* garante texto centralizado */
+}
+
+.card-btn {
+    display: flex;
+    justify-content: center;  /* centraliza horizontal */
+    align-items: center;      /* centraliza vertical */
+    margin: auto;
+    text-decoration: none;
+    background: var(--gradient-blue-f);
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    text-align: center;       /* garante o texto centralizado */
+}
+
+.card-btn:hover {
+    background: var(--gradient-blue-s);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
 /* Call to action */
