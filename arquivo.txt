@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Input Animado</title>
+    <style>
+        .input-box {
+            position: relative;
+            margin: 20px 0;
+        }
+
+        .input-box .label {
+            color: #999;
+            font-size: 16px;
+            font-weight: normal;
+            position: absolute;
+            pointer-events: none;
+            left: 15px;
+            top: 12px;
+            display: flex;
+        }
+
+        .input-box .char {
+            transition: 0.2s ease all;
+            transition-delay: calc(var(--index) * .05s);
+        }
+
+        .input-box .input:focus ~ .label .char,
+        .input-box .input:valid ~ .label .char {
+            transform: translateY(-20px);
+            font-size: 14px;
+            color: #3679ff;
+            background: #e8e8e8;
+        }
+
+        .input-box .input {
+            width: 300px;
+            padding: 12px 15px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .input-box .input:focus {
+            border-color: #3679ff;
+        }
+
+        /* Estilos adicionais para melhor visualização */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Teste do Input Animado</h1>
+        
+        <div class="input-box">
+            <input type="text" class="input" required>
+            <label class="label">
+                <span class="char" style="--index: 0">N</span>
+                <span class="char" style="--index: 1">o</span>
+                <span class="char" style="--index: 2">m</span>
+                <span class="char" style="--index: 3">e</span>
+            </label>
+        </div>
+
+        <div class="input-box">
+            <input type="email" class="input" required>
+            <label class="label">
+                <span class="char" style="--index: 0">E</span>
+                <span class="char" style="--index: 1">m</span>
+                <span class="char" style="--index: 2">a</span>
+                <span class="char" style="--index: 3">i</span>
+                <span class="char" style="--index: 4">l</span>
+            </label>
+        </div>
+
+        <div class="input-box">
+            <input type="text" class="input" required>
+            <label class="label">
+                <span class="char" style="--index: 0">T</span>
+                <span class="char" style="--index: 1">e</span>
+                <span class="char" style="--index: 2">l</span>
+                <span class="char" style="--index: 3">e</span>
+                <span class="char" style="--index: 4">f</span>
+                <span class="char" style="--index: 5">o</span>
+                <span class="char" style="--index: 6">n</span>
+                <span class="char" style="--index: 7">e</span>
+            </label>
+        </div>
+    </div>
+
+    <script>
+        // Adicionando interação para mostrar o efeito
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputs = document.querySelectorAll('.input');
+            
+            inputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.parentElement.classList.add('focused');
+                });
+                
+                input.addEventListener('blur', function() {
+                    if (!this.value) {
+                        this.parentElement.classList.remove('focused');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

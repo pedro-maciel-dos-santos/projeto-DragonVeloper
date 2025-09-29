@@ -1,12 +1,12 @@
-document.addEventListener("DOMContentLoaded", function() {
-    AOS.init({
-        duration: 1000, // duração da animação em ms
-        once: false      // anima apenas uma vez ao rolar
-    });
+document.addEventListener("DOMContentLoaded", function () {
+  AOS.init({
+    duration: 1000, // duração da animação em ms
+    once: false      // anima apenas uma vez ao rolar
+  });
 });
 
 document.querySelectorAll('div a.nav-item').forEach(link => {
-  link.addEventListener('click', function(e) {
+  link.addEventListener('click', function (e) {
     e.preventDefault(); // Impede o comportamento padrão do link
 
     const targetId = this.getAttribute('href').substring(1); // Remove o '#' do href
@@ -48,3 +48,37 @@ window.addEventListener('resize', handleNavbarBackground);
 
 // Verifica logo ao carregar a página
 window.addEventListener('load', handleNavbarBackground);
+
+// interação para mostrar o efeito
+document.addEventListener('DOMContentLoaded', function () {
+  const inputs = document.querySelectorAll('.input');
+
+  inputs.forEach(input => {
+    input.addEventListener('focus', function () {
+      this.parentElement.classList.add('focused');
+    });
+
+    input.addEventListener('blur', function () {
+      if (!this.value) {
+        this.parentElement.classList.remove('focused');
+      }
+    });
+  });
+});
+
+const toggle = document.querySelector('.toggle');
+const menu = document.querySelector('.menu');
+
+toggle.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
+
+// Fechar o menu ao clicar em um link (opcional)
+const menuLinks = document.querySelectorAll('.menu li a');
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    // Adicione aqui a lógica de compartilhamento
+    // Por enquanto, apenas fecha o menu
+    menu.classList.remove('active');
+  });
+});
