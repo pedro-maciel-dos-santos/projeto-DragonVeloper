@@ -9,13 +9,6 @@
     --primary-color-gray: #353d41;
     --second-color-gray: #7a7a7a;
     --primary-color-dark: #050505;
-/*
-    --primary-rgba:;
-    --second-rgba:;
-    --third-rgba:;
-    --fourth-rgba:;
-    --fifth-rgba:;
-*/
 
     --gradient-blue-f: linear-gradient(135deg, var(--third-color-blue) 0%, var(--fourth-color-blue) 100%);
     --gradient-blue-s: linear-gradient(135deg, var(--fifth-color-blue) 0%, var(--third-color-blue) 100%);
