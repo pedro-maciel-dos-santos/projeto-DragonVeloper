@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   AOS.init({
     duration: 1000, // duração da animação em ms
-    once: false      // anima apenas uma vez ao rolar
+    once: false // anima apenas uma vez ao rolar
   });
 });
 
@@ -73,7 +73,6 @@ toggle.addEventListener('click', () => {
   menu.classList.toggle('active');
 });
 
-// Fechar o menu ao clicar em um link (opcional)
 const menuLinks = document.querySelectorAll('.menu li a');
 menuLinks.forEach(link => {
   link.addEventListener('click', () => {
